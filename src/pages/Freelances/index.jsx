@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Freelances = () => {
-  return (
-    <div>
-        <h1>Freelances 👩‍💻👨‍💻👩‍💻</h1>
-    </div>
-  )
-}
+    return (
+        <div>
+            <h1>Freelances 👩‍💻👨‍💻👩‍💻</h1>
+        </div>
+    );
+};
 
-export default Freelances
+export default Freelances;
