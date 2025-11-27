@@ -1,14 +1,40 @@
 import PropTypes from "prop-types";
 import DefaultPicture from "../../assets/picture.jpg";
+import styled from "styled-components";
 
 const Card = ({ label, title, picture }) => {
     const finalPicture = picture || DefaultPicture;
+    const CardLabel = styled.span`
+        color: #5843e4;
+        font-size: 22px;
+        font-weight: bold;
+    `
+
+    const CardImg = styled.img`
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+    `
+
+    const CardWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: '#F9F9FC';
+    border-radius: 30px;
+    width: 350px;
+    transition: 200ms;
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 10px #e2e3e9;
+    }
+    `
     return (
-        <div style={{ display: "flex", flexDirection: "column", padding: 15 }}>
-            <span>{label}</span>
-            <img src={finalPicture} alt="freelances" height={80} width={80} />
+        <CardWrapper>
+            <CardLabel>{label}</CardLabel>
+            <CardImg src={finalPicture} alt="freelances" />
             <span>{title}</span>
-        </div>
+        </CardWrapper>
     );
 };
 
